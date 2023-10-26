@@ -1,38 +1,604 @@
-.App {
-  text-align: center;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none !important;
+    text-decoration: none !important;
+    /* border: 1px solid red; */
+  }
+
+  p {
+    margin-bottom: 0 !important;
+  }
+  ul{
+    padding: 0 !important;
+  }
+
+
+  .Container_main {
+    max-width: 1140px !important;
+  }
+
+  .ff-audiowide {
+    font-family: 'Audiowide', sans-serif;
+  }
+
+  .ff-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .header-icons a img {
+    transition: all 300ms;
+  }
+
+  .header-icons a img:hover {
+    transform: scale(1.1);
+  }
+
+  .App {
+    text-align: center;
+  }
+
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
   }
-}
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .hero_bg {
+    background-image: url(../src/Assets/images/hero-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nav_links {
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .nav_link {
+    border: 2px solid white;
+    padding: 4px 22px;
+    transform: skewX(-30deg);
+    color: white;
+    position: relative;
+    background: transparent;
+  }
+
+  .nav_link::before,
+  .nav_link::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: 700ms ease-in;
+  }
+
+  .nav_link:hover:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    border-top: 3px solid #1EADB6;
+    border-right: 3px solid #1EADB6;
+  }
+
+  .nav_link:hover:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    border-bottom: 3px solid #1EADB6;
+    border-left: 3px solid #1EADB6;
+  }
+  .hero-img{
+    width: 50%;
+  }
+  .hero_subline {
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .btn_1 {
+    border-radius: 7px;
+    background: #1EADB6;
+    border: none;
+    padding: 12px 36px;
+    font-size: 10px;
+  }
+
+  .btn_2 {
+    border-radius: 7px;
+    border: 2px solid #1EADB6;
+    background: none;
+    padding: 12px 36px;
+    color: white;
+    font-size: 10px;
+  }
+
+  .play_btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+  }
+  .play_btn img{
+    width: 50%;
+  }
+
+  .btn-check:checked+.btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check)+.btn:active {
+    color: none;
+    background: none;
+    border-color: transparent !important;
+  }
+
+  .gameplay_heading {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .gameplay_heading span {
+    color: #1EADB6;
+  }
+
+  .gameplay_line1 {
+    width: 179px;
+    height: 2px;
+    background: #1EADB6;
+    position: absolute;
+    left: 50%;
+    top: -1px;
+  }
+
+  .gameplay_line2 {
+    width: 179px;
+    height: 2px;
+    background: #1EADB6;
+    position: absolute;
+    left: 33.5%;
+    bottom: -5px;
+  }
+
+  .section_3_heading {
+
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 113.49%;
+    padding-bottom: 20px;
+  }
+
+  .section_3_heading span {
+    color: #1EADB6;
+  }
+
+  .section_3para {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: 0.7;
+    text-align: justify;
+  }
+
+  .line-3 {
+    position: absolute;
+    bottom: 0;
+    background: #1EADB6;
+    width: 179px;
+    height: 2px;
+    left: 24%;
+  }
+
+  .section_3bg {
+    background-image: url(../src/Assets/images/section_3bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .crypto_heading {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .crypto_heading~p {
+    color: #FFF;
+    text-align: left;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.7;
+  }
+
+  .line-4 {
+    position: absolute;
+    background: #1EADB6;
+    height: 2px;
+    width: 179px;
+    bottom: 70%;
+  }
+
+  .Team_heading {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .line-6 {
+    position: absolute;
+    left: 43%;
+    bottom: 0;
+    background: #1EADB6;
+    height: 2px;
+    width: 179px;
+  }
+
+  .team_name {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .team_designation {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .team_img {
+
+    transition: all 400ms;
+    cursor: pointer;
+  }
+
+  .team_img:hover {
+    transform: translate(0px, -10px);
+  }
+
+  .accordion-button {
+    color: white !important;
+    background: black !important;
+    font-size: 10px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    border-top-left-radius: 45px !important;
+    padding-left: 29px !important;
+    padding-bottom: 15px !important;
+    padding-top: 25px !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: white !important;
+    background-color: black !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+
+  }
+
+  .accordion-button:focus {
+    z-index: 3;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: none !important;
+    stroke-width: 1px !important;
+    stroke: #1EADB6 !important;
+  }
+
+  .accordion-item {
+    background: black !important;
+    border: 1px solid #1EADB6 !important;
+    border-top-left-radius: 43px !important;
+    border-bottom-right-radius: 45px !important;
+
+  }
+  .accordion{
+    width: 1078px !important;
+    max-width: 94%;
+  }
+
+  .accordion_heading {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .line-8 {
+    position: absolute;
+    bottom: 0;
+    left: 42%;
+    background: #1EADB6;
+    height: 2px;
+    width: 179px;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(../src/Assets/images/accordion_arrow.png) !important;
+    z-index: 5;
+    position: relative;
+  }
+
+  .accordion-button::after {
+    background-image: url(../src/Assets/images/accordion_arrow.png) !important;
+    z-index: 5;
+    position: relative;
+  }
+
+  .accordion-item:hover {
+    box-shadow: 0em 0em 1em 0em #1EADB6, 0px 0px 0px 0px #1EADB6 !important;
+  }
+
+
+  .accordion-body {
+    color: white;
+    padding-left: 29px !important;
+    padding-top: 0 !important;
+    padding-right: 49px !important;
+    text-align: left;
+    font-size: 10px !important;
+  }
+
+  .top_corner {
+    position: absolute;
+    top: -1.4px;
+    left: -2px;
+    z-index: 4;
+  }
+
+  .bottom_corner {
+    position: absolute;
+    bottom: -1.4px;
+    right: -2px;
+    z-index: 4;
+  }
+
+  .accordion-button:hover {
+    z-index: 0 !important;
+  }
+
+  .min-vh-65 {
+    height: 100vh;
+  }
+
+  .line-9 {
+    width: 100%;
+    height: 1px;
+    background: white;
+    opacity: 0.6;
+  }
+
+  .footer-txt {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+  }
+
+  .hover{
+    position:relative;
+    overflow:hidden;
+  }
+  .hover:after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+  }
+
+  .hover:hover::after  ,.hover:focus::after{
+    animation: sheen 1s forwards;
+  }
+  @keyframes sheen {
+    100% {
+      transform: rotateZ(60deg) translate(1em, -9em);
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .menu-button{
+    z-index: 9;
+  }
+  .left_0{
+    left: 0;
+  }
+  .crypto-img{
+    width: 100%;
+  }
+  .section_7img{
+    height: 255px;
+    width: 100%;
+  }
+  .section_7img2{
+    height: 255px;
+    width: 100%;
+  }
+
+  @media (max-width:992px) {
+    .Nav-Bar{
+      position: fixed;
+      opacity: 0;
+      top: 0;
+      left: -100%;
+      height: 100vh;
+      width: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+
+    }
+    label[for="iconbox"] {
+      height: 20px;
+      width: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+      z-index: 70;
+      cursor: pointer;
+    }
+  
+    label[for="iconbox"]>span {
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid #1EADB6;
+    }
+  
+    input[type="checkbox"]:checked+ul.Nav-Bar {
+      opacity: 1;
+      left: 0;
+      z-index: 20;
+    }
+  }
+
+  
+  @media (min-width:768px) {
+      .section_3_heading{
+        font-size: 48px;
+      }
+      .gameplay_heading{
+        font-size: 36px;
+      }
+      .accordion{
+        width: 734px;
+      }
+      .min-vh-65{
+        height: 90vh;
+      }
+  }
+
+  @media (min-width:992px) {
+      .hero-img{
+        width: 100%;
+      }
+      .hero_subline{
+        font-size: 28px;
+      }
+      .btn_1{
+        font-size: 16px;
+      }
+      .btn_2{
+        font-size: 16px;
+      }
+      .gameplay_heading{
+        font-size: 64px;
+      }
+      .gameplay_line1{
+        top: 1px;
+      }
+      .play_btn img{
+        width: 100%;
+      }
+      .section_3_heading{
+        font-size: 64px;
+      }
+      .line-3{
+        left: 0;
+      }
+      .section_3para{
+        font-size: 16px;
+      }
+      .crypto_heading{
+        font-size: 64px;
+      }
+      .crypto_heading ~ p {
+        font-size: 16px;
+      }
+      .crypto-img{
+        width: 70%;
+      }
+      .line-4{
+        top: 41%;
+      }
+      .Team_heading{
+        font-size: 64px;
+      }
+      .accordion_heading{
+        font-size: 64px;
+      }
+      .accordion-button{
+        font-size: 24px !important;
+        padding-left: 49px !important;
+      }
+      .accordion-body{
+        font-size: 16px !important;
+        padding-right: 69px !important;
+        padding-left: 49px !important;
+      }
+  }
+
+  @media (min-width:1024px) {
+      .section_7img{
+        height: 255px;
+        width: 100%;
+      }
+      .section_7img2{
+        height: 255px;
+        width: 100%;
+      }
+
+  }
